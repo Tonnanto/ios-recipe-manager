@@ -1,0 +1,27 @@
+
+/* Class = "UITabBarItem"; title = "Recipes"; ObjectID = "048-E0-xyF"; */
+"048-E0-xyF.title" = "Rezepte";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "H6k-EV-PMP"; */
+"H6k-EV-PMP.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "QNJ-Um-OuB"; */
+"QNJ-Um-OuB.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Recipes"; ObjectID = "RgD-3c-6Kn"; */
+"RgD-3c-6Kn.title" = "Rezepte";
+
+/* Class = "UITabBarItem"; title = "Favourites"; ObjectID = "XK0-Ph-cpE"; */
+"XK0-Ph-cpE.title" = "Favouriten";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "Ygy-WH-Oeq"; */
+"Ygy-WH-Oeq.text" = "Detail";
+
+/* Class = "UIViewController"; title = "My Recipes"; ObjectID = "eZE-Uy-sct"; */
+"eZE-Uy-sct.title" = "Meine Rezepte";
+
+/* Class = "UINavigationItem"; title = "More"; ObjectID = "n2f-kJ-jwV"; */
+"n2f-kJ-jwV.title" = "Mehr";
+
+/* Class = "UIViewController"; title = "Recipe"; ObjectID = "yWP-PV-QO8"; */
+"yWP-PV-QO8.title" = "Rezepte";

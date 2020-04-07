@@ -1,0 +1,120 @@
+/* 
+  Localizable.strings
+  RecipeManager
+
+  Created by Anton Stamme on 18.03.20.
+  Copyright © 2020 Anton Stamme. All rights reserved.
+*/
+
+// Tabs
+
+
+// Recipe Detail
+"Ingredients" = "Zutaten";
+"Preperation Steps" = "Zubereitung";
+"Added" = "Hinzugefügt";
+
+// New Recipe
+"Next" = "Weiter";
+"Cancel" = "Abbrechen";
+"Save" = "Speichern";
+"Done" = "Fertig";
+"Delete" = "Löschen";
+"Edit" = "Bearbeiten";
+"Editing Recipe" = "Rezept bearbeiten";
+"Title missing" = "Titel fehlt";
+"Please add a Title to your recipe." = "Bitte füge einen Titel hinzu.";
+"Ingredients missing" = "Keine Zutaten";
+"Please add at least one ingredient to your recipe." = "Bitte füge mindestens eine Zutat hinzu.";
+"Preperation Steps missing" = "Kein Zubereitungsschritt";
+"Please add at least one preperation step to your recipe." = "Bitte füge mindestens einen Schritt hinzu.";
+"Images" = "Bilder";
+"Title" = "Titel";
+"Categories" = "Kategorien";
+"Details" = "Details";
+"Delete Recipe" = "Rezept löschen";
+"Are you sure you want to delete this recipe? It will also be removed from the cloud." = "Bist du sicher? Das Rezept wird auch aus der Cloud gelöscht.";
+"Add Photo" = "Bild hinzufügen";
+"Take Photo" = "Foto aufnehmen";
+"Choose from Library" = "Aus Gallerie wählen";
+"Remove Photo" = "Bild entfernen";
+"Change Photo" = "Bild ändern";
+"Add a title..." = "Titel hinzufügen...";
+"Select Categories" = "Kategorien auswählen";
+"Primary Categories" = "Hauptkategorien";
+"Secondary Categories" = "Nebenkategorien";
+"Add List" = "Liste hinzufügen";
+"Add Ingredient" = "Zutat hinzufügen";
+"Main Ingredients" = "Hauptzutaten";
+"New Ingredient List" = "Neue Zutatenliste";
+"Name (i.E. \"Sauce\")" = "Name (z.B. \"Sauce\"";
+"Ingredient" = "Zutat";
+"unit" = "einheit";
+"Add Unit" = "Einheit hinzufügen";
+"Custom Unit" = "Neue Einheit";
+"Add a custom unit. For instance an ingredient specific unit i.E. \"Clove\" for garlic." = "Füge eine eigene Einheit hinzu. z.B. \"Zehe\" für Knoblauch.";
+"Add Step" = "Schritt hinzufügen";
+"Preperation Steps" = "Zubereitungsschritte";
+"First Step..." = "Erster Schritt...";
+"Next Step..." = "Nächster Schritt...";
+
+
+
+// Recipe.Category
+"Show All" = "Alle zeigen";
+"Cooking" = "Kochen";
+"Baking" = "Backen";
+"Grill" = "Grillen";
+"Meal" = "Mahlzeit";
+"Pastries" = "Gebäck";
+"Snack" = "Snack";
+"Seasoning / Salt" = "Gewürz / Salz";
+"Dessert" = "Dessert";
+"Dips / Sauces" = "Dips / Soßen";
+"Drink" = "Getränk";
+"Vegetarian" = "Vegetarisch";
+"Side Dish" = "Beilage";
+"Breakfast" = "Frühstück";
+
+// Units
+// .name
+"Table Spoons" = "Esslöffel";
+"Tea Spoons" = "Teelöffel";
+"Cups" = "Tassen";
+"Litre" = "Liter";
+"Millilitre" = "Milliliter";
+"Gallon" = "Gallone";
+"Fluid Ounce" = "Flüssigunze";
+"Gram" = "Gramm";
+"Kilogram" = "Kilogramm";
+"Ounce" = "Unze";
+"Pound" = "Pfund";
+"Pieces" = "Stück";
+"Slices" = "Scheiben";
+"Sprinkle" = "Prise";
+
+// .short
+"tbsp" = "EL";
+"tsp" = "TL";
+"cups" = "Cup";
+"l" = "l";
+"ml" = "ml";
+"gal" = "gal";
+"fl oz" = "fl oz";
+"g" = "g";
+"kg" = "kg";
+"oz" = "oz";
+"lb" = "lb";
+"pcs" = "Stk.";
+
+// More Tab
+"Settings" = "Einstellungen";
+"Use retarded units" = "Retarded Units benutzen";
+"ON" = "AN";
+"OFF" = "AUS";
+
+
+
+
+
+"" = "";

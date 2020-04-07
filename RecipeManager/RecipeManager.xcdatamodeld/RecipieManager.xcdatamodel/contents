@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Ingredient" representedClassName="Ingredient" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubRecipe" inverseName="ingredientList" inverseEntity="SubRecipe"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IngredientType" inverseName="ingredients" inverseEntity="IngredientType"/>
+    </entity>
+    <entity name="IngredientType" representedClassName="IngredientType" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="unitName" optional="YES" attributeType="String"/>
+        <attribute name="unitString" optional="YES" attributeType="String" defaultValueString="none"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="type" inverseEntity="Ingredient"/>
+    </entity>
+    <entity name="PreperationStep" representedClassName="PreperationStep" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="preperationSteps" inverseEntity="Recipe"/>
+    </entity>
+    <entity name="Recipe" representedClassName="Recipe" syncable="YES">
+        <attribute name="categoriesString" optional="YES" attributeType="String"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="images" optional="YES" attributeType="Binary"/>
+        <attribute name="infoString" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="isFavourite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="modificationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="recordName" optional="YES" attributeType="String"/>
+        <attribute name="tagsString" optional="YES" attributeType="String"/>
+        <relationship name="preperationSteps" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="PreperationStep" inverseName="recipe" inverseEntity="PreperationStep"/>
+        <relationship name="subRecipes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="SubRecipe" inverseName="recipe" inverseEntity="SubRecipe"/>
+    </entity>
+    <entity name="SubRecipe" representedClassName="SubRecipe" syncable="YES">
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="ingredientList" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Ingredient" inverseName="recipe" inverseEntity="Ingredient"/>
+        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="subRecipes" inverseEntity="Recipe"/>
+    </entity>
+    <elements>
+        <element name="Ingredient" positionX="-181.9140625" positionY="34.33984375" width="128" height="88"/>
+        <element name="IngredientType" positionX="51.34375" positionY="55.69921875" width="128" height="103"/>
+        <element name="PreperationStep" positionX="-597.671875" positionY="-170.734375" width="128" height="73"/>
+        <element name="Recipe" positionX="-403.5546875" positionY="-243.5234375" width="128" height="208"/>
+        <element name="SubRecipe" positionX="-398.66015625" positionY="20.36328125" width="128" height="103"/>
+    </elements>
+</model>
