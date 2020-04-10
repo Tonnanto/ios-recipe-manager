@@ -2,7 +2,7 @@
 //  Recipe+CoreDataProperties.swift
 //  RecipeManager
 //
-//  Created by Anton Stamme on 15.03.20.
+//  Created by Anton Stamme on 09.04.20.
 //  Copyright © 2020 Anton Stamme. All rights reserved.
 //
 //
@@ -17,52 +17,18 @@ extension Recipe {
         return NSFetchRequest<Recipe>(entityName: "Recipe")
     }
 
-    @NSManaged public var creationDate: Date?
-    @NSManaged public var modificationDate: Date?
-    @NSManaged public var images: Data?
-    @NSManaged public var isFavourite: Bool
-    @NSManaged public var name: String
-    @NSManaged public var tagsString: String
-    @NSManaged public var infoString: String
     @NSManaged public var categoriesString: String
+    @NSManaged public var creationDate: Date?
+    @NSManaged public var images: Data?
+    @NSManaged public var infoString: String
+    @NSManaged public var isFavourite: Bool
+    @NSManaged public var modificationDate: Date?
+    @NSManaged public var name: String
     @NSManaged public var recordName: String
-    @NSManaged public var subRecipes: NSOrderedSet
+    @NSManaged public var tagsString: String
     @NSManaged public var preperationSteps: NSOrderedSet
-
-}
-
-// MARK: Generated accessors for subRecipes
-extension Recipe {
-
-    @objc(insertObject:inSubRecipesAtIndex:)
-    @NSManaged public func insertIntoSubRecipes(_ value: SubRecipe, at idx: Int)
-
-    @objc(removeObjectFromSubRecipesAtIndex:)
-    @NSManaged public func removeFromSubRecipes(at idx: Int)
-
-    @objc(insertSubRecipes:atIndexes:)
-    @NSManaged public func insertIntoSubRecipes(_ values: [SubRecipe], at indexes: NSIndexSet)
-
-    @objc(removeSubRecipesAtIndexes:)
-    @NSManaged public func removeFromSubRecipes(at indexes: NSIndexSet)
-
-    @objc(replaceObjectInSubRecipesAtIndex:withObject:)
-    @NSManaged public func replaceSubRecipes(at idx: Int, with value: SubRecipe)
-
-    @objc(replaceSubRecipesAtIndexes:withSubRecipes:)
-    @NSManaged public func replaceSubRecipes(at indexes: NSIndexSet, with values: [SubRecipe])
-
-    @objc(addSubRecipesObject:)
-    @NSManaged public func addToSubRecipes(_ value: SubRecipe)
-
-    @objc(removeSubRecipesObject:)
-    @NSManaged public func removeFromSubRecipes(_ value: SubRecipe)
-
-    @objc(addSubRecipes:)
-    @NSManaged public func addToSubRecipes(_ values: NSOrderedSet)
-
-    @objc(removeSubRecipes:)
-    @NSManaged public func removeFromSubRecipes(_ values: NSOrderedSet)
+    @NSManaged public var subRecipes: NSOrderedSet
+    @NSManaged public var recipeBook: RecipeBook
 
 }
 
@@ -98,5 +64,40 @@ extension Recipe {
 
     @objc(removePreperationSteps:)
     @NSManaged public func removeFromPreperationSteps(_ values: NSOrderedSet)
+
+}
+
+// MARK: Generated accessors for subRecipes
+extension Recipe {
+
+    @objc(insertObject:inSubRecipesAtIndex:)
+    @NSManaged public func insertIntoSubRecipes(_ value: SubRecipe, at idx: Int)
+
+    @objc(removeObjectFromSubRecipesAtIndex:)
+    @NSManaged public func removeFromSubRecipes(at idx: Int)
+
+    @objc(insertSubRecipes:atIndexes:)
+    @NSManaged public func insertIntoSubRecipes(_ values: [SubRecipe], at indexes: NSIndexSet)
+
+    @objc(removeSubRecipesAtIndexes:)
+    @NSManaged public func removeFromSubRecipes(at indexes: NSIndexSet)
+
+    @objc(replaceObjectInSubRecipesAtIndex:withObject:)
+    @NSManaged public func replaceSubRecipes(at idx: Int, with value: SubRecipe)
+
+    @objc(replaceSubRecipesAtIndexes:withSubRecipes:)
+    @NSManaged public func replaceSubRecipes(at indexes: NSIndexSet, with values: [SubRecipe])
+
+    @objc(addSubRecipesObject:)
+    @NSManaged public func addToSubRecipes(_ value: SubRecipe)
+
+    @objc(removeSubRecipesObject:)
+    @NSManaged public func removeFromSubRecipes(_ value: SubRecipe)
+
+    @objc(addSubRecipes:)
+    @NSManaged public func addToSubRecipes(_ values: NSOrderedSet)
+
+    @objc(removeSubRecipes:)
+    @NSManaged public func removeFromSubRecipes(_ values: NSOrderedSet)
 
 }

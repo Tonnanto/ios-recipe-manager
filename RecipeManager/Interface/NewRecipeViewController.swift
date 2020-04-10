@@ -304,7 +304,7 @@ class NewRecipeViewController: UIViewController {
                     recipe.addToSubRecipes(subRecipe)
                 }
                 
-                recipes.append(recipe)
+                recipes.insert(recipe, at: 0)
                 CloudKitService.uploadRecipe(recipe: recipe) { (success, record) in
 
                 }

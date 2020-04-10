@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Ingredient" representedClassName="Ingredient" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubRecipe" inverseName="ingredientList" inverseEntity="SubRecipe"/>
@@ -26,7 +26,15 @@
         <attribute name="recordName" optional="YES" attributeType="String"/>
         <attribute name="tagsString" optional="YES" attributeType="String"/>
         <relationship name="preperationSteps" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="PreperationStep" inverseName="recipe" inverseEntity="PreperationStep"/>
+        <relationship name="recipeBook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RecipeBook" inverseName="recipes" inverseEntity="RecipeBook"/>
         <relationship name="subRecipes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="SubRecipe" inverseName="recipe" inverseEntity="SubRecipe"/>
+    </entity>
+    <entity name="RecipeBook" representedClassName="RecipeBook" syncable="YES">
+        <attribute name="appearenceString" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="imageData" optional="YES" attributeType="Binary"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
+        <attribute name="recordName" optional="YES" attributeType="String" defaultValueString=""/>
+        <relationship name="recipes" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Recipe" inverseName="recipeBook" inverseEntity="Recipe"/>
     </entity>
     <entity name="SubRecipe" representedClassName="SubRecipe" syncable="YES">
         <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -38,7 +46,8 @@
         <element name="Ingredient" positionX="-181.9140625" positionY="34.33984375" width="128" height="88"/>
         <element name="IngredientType" positionX="51.34375" positionY="55.69921875" width="128" height="103"/>
         <element name="PreperationStep" positionX="-597.671875" positionY="-170.734375" width="128" height="73"/>
-        <element name="Recipe" positionX="-403.5546875" positionY="-243.5234375" width="128" height="208"/>
+        <element name="Recipe" positionX="-403.5546875" positionY="-243.5234375" width="128" height="223"/>
+        <element name="RecipeBook" positionX="-396" positionY="-99" width="128" height="118"/>
         <element name="SubRecipe" positionX="-398.66015625" positionY="20.36328125" width="128" height="103"/>
     </elements>
 </model>

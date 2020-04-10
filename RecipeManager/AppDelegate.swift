@@ -21,11 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.registerForRemoteNotifications()
         
         let fetchIngredientTypesRequest: NSFetchRequest<IngredientType> = IngredientType.fetchRequest()
+        let fetchRecipeBooksRequest: NSFetchRequest<RecipeBook> = RecipeBook.fetchRequest()
+
         let fetchRecipesRequest: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         
         do {
             let fetchedIngredientTypes = try PersistenceService.context.fetch(fetchIngredientTypesRequest)
             let fetchedRecipes = try PersistenceService.context.fetch(fetchRecipesRequest)
+            let fetchedRecipeBooks = try PersistenceService.context.fetch(fetchRecipeBooksRequest)
 
             
             if fetchedIngredientTypes.count == 0 {
@@ -43,6 +46,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } else {
                 recipes = fetchedRecipes
                 print("Recipes fetched")
+            }
+            
+            if fetchedRecipeBooks.count == 0 {
+                print("No RecipeBooks Added yet")
+            } else {
+                recipeBooks = fetchedRecipeBooks
+                print("RecipeBooks fetched")
             }
             
             PersistenceService.saveContext()

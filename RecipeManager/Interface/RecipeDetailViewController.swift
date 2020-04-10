@@ -164,7 +164,7 @@ extension RecipeDetailViewController: UICollectionViewDelegate, UICollectionView
         let c = content[indexPath.item]
         let width = collectionView.bounds.width
         switch c {
-        case .images: return CGSize(width: width, height: width)
+        case .images: return CGSize(width: width, height: width * 0.8)
         case .categories: return CGSize(width: width, height: 84)
         case .title:
             let titleHeight = recipe?.name.heightWithConstrainedWidth(width: width - (2 * RecipeDetailViewController.contentInset) - 50, font: RecipeDetailTitleCell.titleFont) ?? 80

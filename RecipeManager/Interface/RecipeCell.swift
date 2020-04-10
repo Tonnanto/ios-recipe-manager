@@ -11,7 +11,7 @@ import UIKit
 
 class RecipeCell: BaseTableViewCell {
     
-    var _target: MyRecipesViewController!
+    var _target: RecipesViewController!
     var recipe: Recipe?
     
     @IBOutlet weak var _imageView: UIImageView!

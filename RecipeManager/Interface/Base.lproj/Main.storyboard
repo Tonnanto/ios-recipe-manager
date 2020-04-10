@@ -39,7 +39,7 @@
                         <color key="tintColor" name="heavyTint"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="eZE-Uy-sct" kind="relationship" relationship="rootViewController" id="Vpz-Wf-CZQ"/>
+                        <segue destination="Oao-42-Tsw" kind="relationship" relationship="rootViewController" id="YX0-sp-yO1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4or-aP-r7E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -183,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ede-q3-fG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3528.985507246377" y="1431.6964285714284"/>
+            <point key="canvasLocation" x="-3532" y="2916"/>
         </scene>
         <!--New Recipe-->
         <scene sceneID="Hdi-G4-yKd">
@@ -261,12 +261,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asy-ct-vz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2610.144927536232" y="1431.6964285714284"/>
+            <point key="canvasLocation" x="-2612" y="2916"/>
         </scene>
         <!--My Recipes-->
         <scene sceneID="OrN-ZR-nvo">
             <objects>
-                <viewController title="My Recipes" id="eZE-Uy-sct" customClass="MyRecipesViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipesViewController" title="My Recipes" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eZE-Uy-sct" customClass="RecipesViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Imv-0H-uKw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -366,18 +366,143 @@
                         <viewLayoutGuide key="safeArea" id="qk1-O1-RLH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Recipes" id="RgD-3c-6Kn">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="AkF-Jd-ahO">
+                        <barButtonItem key="rightBarButtonItem" image="ellipsis.circle.fill" catalog="system" id="AkF-Jd-ahO">
                             <connections>
-                                <segue destination="j7T-iK-bHX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="sFQ-Vi-Dp0"/>
+                                <action selector="handleMoreButton:" destination="eZE-Uy-sct" id="11J-Xb-Jsz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="moreButton" destination="AkF-Jd-ahO" id="9hY-ax-9ti"/>
                         <outlet property="tableView" destination="FBP-td-Dv4" id="wcU-pm-xoE"/>
                         <segue destination="yWP-PV-QO8" kind="show" id="PiZ-En-h6g"/>
+                        <segue destination="j7T-iK-bHX" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="vku-XV-pBE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3v-2z-igY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1578" y="2174"/>
+        </scene>
+        <!--New Recipe Book View Controller-->
+        <scene sceneID="c86-xe-zPz">
+            <objects>
+                <viewController storyboardIdentifier="NewRecipeBookViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nlY-Iv-TYn" customClass="NewRecipeBookViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q0K-Gc-iTa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="55" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="d7E-xQ-XaL">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uvk-ix-Tfq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <color key="tintColor" name="heavyTint"/>
+                                <items>
+                                    <navigationItem title="New Recipe Book" id="EZZ-4U-z7x">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Xk9-2C-bDZ">
+                                            <connections>
+                                                <action selector="handleCancelButton:" destination="nlY-Iv-TYn" id="kjm-KC-I4a"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Eya-93-MC1">
+                                            <connections>
+                                                <action selector="handleSaveButton:" destination="nlY-Iv-TYn" id="kAf-Qg-mte"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d7E-xQ-XaL" firstAttribute="top" secondItem="uvk-ix-Tfq" secondAttribute="bottom" id="Fnw-pp-YUO"/>
+                            <constraint firstAttribute="bottom" secondItem="d7E-xQ-XaL" secondAttribute="bottom" id="I5g-Gr-y8h"/>
+                            <constraint firstItem="d7E-xQ-XaL" firstAttribute="trailing" secondItem="3w7-Kc-gJ7" secondAttribute="trailing" id="JXL-De-Glc"/>
+                            <constraint firstItem="uvk-ix-Tfq" firstAttribute="top" secondItem="3w7-Kc-gJ7" secondAttribute="top" id="bLA-ns-Qzy"/>
+                            <constraint firstItem="uvk-ix-Tfq" firstAttribute="trailing" secondItem="3w7-Kc-gJ7" secondAttribute="trailing" id="cqp-UJ-r9W"/>
+                            <constraint firstItem="d7E-xQ-XaL" firstAttribute="leading" secondItem="3w7-Kc-gJ7" secondAttribute="leading" id="pK0-Ly-0n7"/>
+                            <constraint firstItem="uvk-ix-Tfq" firstAttribute="leading" secondItem="3w7-Kc-gJ7" secondAttribute="leading" id="uMY-QX-GLn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3w7-Kc-gJ7"/>
+                    </view>
+                    <connections>
+                        <outlet property="saveButton" destination="Eya-93-MC1" id="hRd-Qg-9QA"/>
+                        <outlet property="tableView" destination="d7E-xQ-XaL" id="1im-9r-w5F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPh-qx-uFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2614.4927536231885" y="1431.6964285714284"/>
+        </scene>
+        <!--Recipe Books-->
+        <scene sceneID="VGV-3T-pTX">
+            <objects>
+                <viewController id="Oao-42-Tsw" customClass="RecipeBooksViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A8o-ee-nEB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ej7-Xi-abl">
+                                <rect key="frame" x="0.0" y="241" width="414" height="560"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewLayout key="collectionViewLayout" id="bUf-IG-qNS" customClass="RecipeBooksShelfFlowLayout" customModule="Recipes" customModuleProvider="target"/>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrT-zZ-8dX">
+                                <rect key="frame" x="24" y="164" width="366" height="65"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="SHX-BK-efw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="tintColor" name="heavyTint"/>
+                                <inset key="contentEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="  All Recipes" image="recipe_80">
+                                    <color key="titleColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleAllRecipeButton:" destination="Oao-42-Tsw" eventType="touchUpInside" id="3qo-Pq-p2k"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Gul-oz-FyD">
+                                <rect key="frame" x="187.5" y="776" width="39" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="3QX-LX-TPC"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gul-oz-FyD" firstAttribute="centerX" secondItem="A8o-ee-nEB" secondAttribute="centerX" id="1Ni-33-y93"/>
+                            <constraint firstItem="Ej7-Xi-abl" firstAttribute="leading" secondItem="EfB-Jm-Nab" secondAttribute="leading" id="9Rq-E0-LWz"/>
+                            <constraint firstItem="Ej7-Xi-abl" firstAttribute="trailing" secondItem="EfB-Jm-Nab" secondAttribute="trailing" id="F99-42-shr"/>
+                            <constraint firstItem="EfB-Jm-Nab" firstAttribute="trailing" secondItem="YrT-zZ-8dX" secondAttribute="trailing" constant="24" id="FsU-O1-dq4"/>
+                            <constraint firstItem="Ej7-Xi-abl" firstAttribute="bottom" secondItem="EfB-Jm-Nab" secondAttribute="bottom" constant="-12" id="qdm-Pp-NXF"/>
+                            <constraint firstItem="Ej7-Xi-abl" firstAttribute="top" secondItem="YrT-zZ-8dX" secondAttribute="bottom" constant="12" id="ukS-Xd-Lat"/>
+                            <constraint firstItem="Gul-oz-FyD" firstAttribute="bottom" secondItem="EfB-Jm-Nab" secondAttribute="bottom" id="uon-PC-2Nk"/>
+                            <constraint firstItem="YrT-zZ-8dX" firstAttribute="top" secondItem="EfB-Jm-Nab" secondAttribute="top" constant="24" id="xLG-Uy-FdQ"/>
+                            <constraint firstItem="YrT-zZ-8dX" firstAttribute="leading" secondItem="EfB-Jm-Nab" secondAttribute="leading" constant="24" id="zY7-Ms-Ao2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EfB-Jm-Nab"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recipe Books" id="zbB-wo-GTo">
+                        <barButtonItem key="backBarButtonItem" title="Books" id="PPU-Bg-Pda"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EMa-HJ-GuJ">
+                            <connections>
+                                <segue destination="nlY-Iv-TYn" kind="presentation" id="Zqk-QC-0om"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="allRecipesButton" destination="YrT-zZ-8dX" id="Id5-QG-CyR"/>
+                        <outlet property="collectionView" destination="Ej7-Xi-abl" id="wi4-Rm-aUJ"/>
+                        <outlet property="pageControl" destination="Gul-oz-FyD" id="jey-43-CcW"/>
+                        <outlet property="plusButton" destination="EMa-HJ-GuJ" id="qsb-I7-hm2"/>
+                        <segue destination="eZE-Uy-sct" kind="show" id="ciQ-6E-o84"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3w-wd-0xe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1578.2608695652175" y="1431.6964285714284"/>
         </scene>
@@ -444,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aq6-qB-xtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1578.2608695652175" y="2132.8125"/>
+            <point key="canvasLocation" x="-1578" y="2875"/>
         </scene>
         <!--Recipes-->
         <scene sceneID="YxN-ZV-IAj">
@@ -463,15 +588,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pag-dN-Su0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2609" y="690"/>
+            <point key="canvasLocation" x="-2612" y="2174"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0Lz-W3-wex"/>
+        <segue reference="vku-XV-pBE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark.fill" width="16" height="16"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="recipe_80" width="26.666666030883789" height="26.666666030883789"/>
         <image name="recipes_75" width="25" height="25"/>
         <namedColor name="heavyTint">
             <color red="0.093999996781349182" green="0.36300000548362732" blue="0.16300000250339508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

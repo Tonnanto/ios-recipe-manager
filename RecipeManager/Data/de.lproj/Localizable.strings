@@ -7,7 +7,8 @@
 */
 
 // Tabs
-
+"Recipes" = "Rezepte";
+"All Recipes" = "Alle Rezepte";
 
 // Recipe Detail
 "Ingredients" = "Zutaten";
@@ -58,7 +59,8 @@
 "First Step..." = "Erster Schritt...";
 "Next Step..." = "Nächster Schritt...";
 
-
+// New RecipeBook
+"My Recipes" = "Meine Rezepte";
 
 // Recipe.Category
 "Show All" = "Alle zeigen";
@@ -75,6 +77,11 @@
 "Vegetarian" = "Vegetarisch";
 "Side Dish" = "Beilage";
 "Breakfast" = "Frühstück";
+
+
+
+// RecipeBook.Color
+"red" = "rot";
 
 // Units
 // .name

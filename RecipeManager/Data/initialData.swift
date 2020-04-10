@@ -10,16 +10,19 @@ import Foundation
 import UIKit
 
 var ingredientTypes: [IngredientType] = []
-var recipes: [Recipe] = [] {
-    didSet {
-        print("recipes updated")
-        NotificationCenter.default.post(name: Recipe.recipesUpdatedNotification, object: nil)
-    }
+var recipeBooks: [RecipeBook] = [] {
+    didSet { NotificationCenter.default.post(name: RecipeBook.recipeBooksUpdatedKey, object: nil) }
 }
+var recipes: [Recipe] = [] {
+    didSet { NotificationCenter.default.post(name: Recipe.recipesUpdatedNotification, object: nil) }
+}
+var sortedRecipes: [Recipe] { return recipes.sorted(by: {$0.creationDate ?? Date(timeIntervalSince1970: 0) > $1.creationDate ?? Date(timeIntervalSince1970: 0)})}
 var favouriteRecipes: [Recipe] {
     return recipes.filter({$0.isFavourite})
 }
 var customUnits: [UnitType] = []
+
+var recipeBookGlyphs: [UIImage?] = [UIImage(named: "cookingHat")]
 
 extension Recipe {
     static func initializeRecipes() {

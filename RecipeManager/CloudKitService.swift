@@ -74,7 +74,7 @@ class CloudKitService {
             group.notify(queue: .main) {
                 do {
                     let recipe = try Recipe(record: record, subRecipes: subRecipes) { (recipe) in
-                        recipes.append(recipe)
+                        recipes.insert(recipe, at: 0)
                         print("Successfully created new Recipe Obj: \(recipe.name)")
                     }
                 } catch {

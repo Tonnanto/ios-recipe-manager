@@ -55,7 +55,7 @@ class PersistenceService {
         return container
     }()
     
-    // MARK: - Core GolfData Saving support
+    // MARK: - Core RecipeManager Saving support
     
     static func saveContext () {
         let context = persistentContainer.viewContext

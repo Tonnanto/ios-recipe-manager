@@ -16,8 +16,6 @@ public class PreperationStep: NSManagedObject {
     init(text: String) {
         super.init(entity: PreperationStep.entity(), insertInto: PersistenceService.context)
         self.text = text
-        
-        PersistenceService.saveContext()
     }
     
     private override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {

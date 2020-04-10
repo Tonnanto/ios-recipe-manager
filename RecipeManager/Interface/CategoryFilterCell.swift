@@ -27,7 +27,7 @@ class CategoryFilterCell: BaseTableViewCell {
         }
     }
     
-    var _target: MyRecipesViewController!
+    var _target: RecipesViewController!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
