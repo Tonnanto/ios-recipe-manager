@@ -1,4 +1,4 @@
-# recipe-manager
+# Recipes
 Simple iOS App that manages all your recipes.
 
 ## General
